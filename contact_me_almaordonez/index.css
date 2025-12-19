@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --main-bg-color: #f2f3f4;
+  --primary-color: #222c5f;
+  --secondary-color: #40bdec;
+  --text-color: #262626;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  background-color: var(--text-color);
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+}
+h2 {
+  color: var(--primary-color);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+p {
+  color: var(--text-color);
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+ul {
+  padding: 0;
+  text-align: start;
+}
+
+li {
+  list-style: none;
+  font-family: var(--font-family-text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.container-main-card {
+  background-color: var(--main-bg-color);
+  width: 25rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+}
+.up-img {
+  width: 100%;
+  height: 20%;
+  background-image: url("./src/Background_first.png");
+  background-size: cover; /* La imagen cubre todo el div */
+  background-position: center; /* Centrada */
+  background-repeat: no-repeat; /* Evita que se repita */
+}
+.bottom-img {
+  width: 100%;
+  height: 80%;
+  background-image: url("./src/Background_second.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.profile-picture{
+    width: 100%;
+    height: 20%;
+    position: relative;
+}
+
+.profile-img {
+  width: 150px;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container-botones{
+    width: 100%;
+    height: 80%;
+}
+
+.title-name{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.container-data-button{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-data-button a{
+    background-color: transparent;
+    border: 1.5px solid #262626;
+    width: 50%;
+    padding: 10px 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+
+.container-data-button a:hover{
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    border: 1.5px solid #262626;
+}
+
+.container-social{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.social img {
+  width: 30px;
+  height: auto;
+}
+
+.social {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .container-main-card {
+    width: 100%;
+    height: 100vh;
+  }
+}
